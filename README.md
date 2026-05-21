@@ -15,7 +15,7 @@ Colisões de trânsito com foco em  gravidade, localização e comparação entr
 - `src/traffic_accidents/`: código principal do pipeline e do dashboard.
 
 ## Fonte de dados
-A fote de bados foram coletadas do PRF:
+A fotes de dados foram coletadas do PRF:
 
 `https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf`
 
