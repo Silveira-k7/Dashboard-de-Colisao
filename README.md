@@ -2,6 +2,9 @@
 
 Projeto final da disciplina para análise exploratória e construção de dois dashboards interativos em Python com Dash.
 
+<img width="1264" height="720" alt="image" src="https://github.com/user-attachments/assets/ebc8cd9d-5850-4797-95b8-9a6cf9f730ec" />
+
+
 ## Tema
 
 Colisões de trânsito em Nova York, com foco em padrões temporais, gravidade, localização e comparação entre grupos.
