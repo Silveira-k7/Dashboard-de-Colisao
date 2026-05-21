@@ -2,27 +2,26 @@
 
 Projeto final da disciplina para análise exploratória e construção de dois dashboards interativos em Python com Dash.
 
-<img width="1264" height="720" alt="image" src="https://github.com/user-attachments/assets/ebc8cd9d-5850-4797-95b8-9a6cf9f730ec" />
-
+<img width="1686" height="895" alt="image" src="https://github.com/user-attachments/assets/f624bbd1-af1a-4baf-9694-09a75ef0e18c" />
 
 ## Tema
 
-Colisões de trânsito em Nova York, com foco em padrões temporais, gravidade, localização e comparação entre grupos.
+Colisões de trânsitom com foco em  gravidade, localização e comparação entre grupos.
 
 ## Estrutura do projeto
 
 - `data/raw/`: arquivos brutos do dataset público, separados por ano.
-- `data/processed/`: base tratada para análise.
 - `scripts/`: utilitários para gerar dados de demonstração ou preparar a base.
 - `src/traffic_accidents/`: código principal do pipeline e do dashboard.
 
 ## Fonte de dados
+A fote de bados foram coletadas do PRF:
+https://www.gov.br/prf/pt-br/acesso-a-informacao/dados-abertos/dados-abertos-da-prf
 
-O projeto usa a base pública de colisões de trânsito de Nova York, disponibilizada pela NYC Open Data.
-
-Os arquivos brutos são coletados em dois recortes anuais distintos para atender ao requisito de múltiplos arquivos e permitir concatenação no pipeline.
-
-O código suporta a lógica de integração por `merge` e `concat`, além de tratamento de ausentes, padronização de campos e geração de variáveis derivadas.
+Baixadas 3 csv:
+Documento CSV de Acidentes 2026 (Agrupados por ocorrência)
+Documento CSV de Acidentes 2026 (Agrupados por pessoa - Todas as causas e tipos de acidentes)
+Documento CSV de Acidentes 2025 (Agrupados por pessoa - Todas as causas e tipos de acidentes)
 
 ## Como executar
 
@@ -31,18 +30,9 @@ O código suporta a lógica de integração por `merge` e `concat`, além de tra
 ```bash
 pip install -r requirements.txt
 ```
+2. Tratamentos de dados e upload dos dataset:
 
-2. Baixe os arquivos brutos em `data/raw/` executando o coletor em `scripts/download_nyc_collisions.py`.
-
-Se você quiser usar dados públicos do ecossistema do Base dos Dados, use também:
-
-```bash
-python scripts/crawler_basedosdados.py --billing-project-id SEU_PROJETO_GCP
-```
-
-Observação: consultas via `basedosdados` usam BigQuery e exigem credenciais + projeto de faturamento.
-
-Para os seus arquivos PRF/Datatran já colocados em `data/raw/`, não precisa do crawler: o pipeline já lê CSV local automaticamente.
+Upar na pasta `Data/raw`
 
 3. Execute o app:
 
@@ -55,4 +45,3 @@ python app.py
 - Dashboard 1: visão geral executiva.
 - Dashboard 2: exploração interativa com filtros e comparações.
 - Pipeline de limpeza, transformação e agregação.
-- Base estruturada para relatório e apresentação.
